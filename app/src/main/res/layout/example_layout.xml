@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is an example layout."
+        android:text="MRN: 0006, M, 20"
         android:textColor="#fff" />
 
     <TextView

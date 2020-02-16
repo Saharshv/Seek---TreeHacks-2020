@@ -79,3 +79,8 @@ sceneform.asset('sampledata/smoller.obj',
         'default',
         'sampledata/smoller.sfa',
         'src/main/assets/smoller')
+
+sceneform.asset('sampledata/sky.obj',
+        'default',
+        'sampledata/sky.sfa',
+        'src/main/assets/sky')

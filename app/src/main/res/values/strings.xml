@@ -14,7 +14,7 @@
    limitations under the License.
 -->
 <resources>
-    <string name="app_name">ARCore-Location</string>
+    <string name="app_name">seekAR</string>
     <string name="plane_finding">Searching for surfaces&#8230;</string>
     <string name="title_activity_login">Sign In</string>
     <string name="prompt_email">Username</string>

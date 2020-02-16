@@ -78,7 +78,7 @@ public class LocationActivity extends AppCompatActivity {
     private ViewRenderable exampleLayoutRenderable;
 
     // Our ARCore-Location scene
-    private LocationScene locationScene;
+    private MyLocationScene locationScene;
     private Context context;
 
 
@@ -105,7 +105,7 @@ public class LocationActivity extends AppCompatActivity {
         // When you build a Renderable, Sceneform loads its resources in the background while returning
         // a CompletableFuture. Call thenAccept(), handle(), or check isDone() before calling get().
         CompletableFuture<ModelRenderable> andy = ModelRenderable.builder()
-                .setSource(this, Uri.parse("smoller.sfb"))
+                .setSource(this, Uri.parse("sky.sfb"))
                 .build();
 
 
@@ -160,14 +160,14 @@ public class LocationActivity extends AppCompatActivity {
                                             if (locationScene == null) {
                                                 // If our locationScene object hasn't been setup yet, this is a good time to do it
                                                 // We know that here, the AR components have been initiated.
-                                                locationScene = new LocationScene(context , LocationActivity.this, arSceneView);
-                                                locationScene.setBearingAdjustment( locationScene.getBearingAdjustment() - 1 );
+                                                locationScene = new MyLocationScene(context , LocationActivity.this, arSceneView);
+                                                //locationScene.setBearingAdjustment( locationScene.getBearingAdjustment() - 1 );
 
                                                 // Now lets create our location markers.
                                                 // First, a layout
                                                 LocationMarker layoutLocationMarker = new LocationMarker(
-                                                        -4.849509,
-                                                        42.814603,
+                                                        msg.get(0),
+                                                        msg.get(1),
                                                         getExampleView()
                                                 );
 
@@ -189,6 +189,7 @@ public class LocationActivity extends AppCompatActivity {
                                                         new LocationMarker(
                                                                 msg.get(0),
                                                                 msg.get(1),
+
                                                                 getAndy()));
                                             }
 
